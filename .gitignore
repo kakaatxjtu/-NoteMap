@@ -1,0 +1,26 @@
+# 构建产物与运行时数据（不提交）
+notemap/build/
+notemap/target/
+notemap/cjpm.lock
+notemap/notemap-data/
+
+# 临时与系统文件
+*.tmp
+*.log
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# 模板的工作副本（正式文档见根目录的 NoteMap_*.docx）
+开题报告_工作副本.docx
+中期报告_模板副本.docx
+
+# �ĵ����ɽű���ݸ壨��������Ŀ���룩
+build_*.py
+fill_docx.py
+style_preview.py
+preview_*.png
+_mid_dump.txt
+_dump.txt
+build/
+

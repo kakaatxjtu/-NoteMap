@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NoteMap · 本地知识库</title>
+<link rel="stylesheet" href="/app.css"/>
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="brand">
+      <div class="logo">N</div>
+      <div class="brand-text">
+        <div class="name">NoteMap</div>
+        <div class="sub">本地 Markdown 知识库</div>
+      </div>
+    </div>
+
+    <div class="side-actions">
+      <button id="btn-new-note" class="btn btn-solid">新建笔记</button>
+      <button id="btn-new-folder" class="btn">新建文件夹</button>
+    </div>
+
+    <div class="search-box">
+      <input id="search" type="text" placeholder="搜索笔记内容…" autocomplete="off"/>
+    </div>
+
+    <div id="search-results" class="search-results hidden"></div>
+
+    <div class="tree-head">
+      <span>文档树</span>
+      <span id="tree-count" class="muted"></span>
+    </div>
+    <div id="tree" class="tree"></div>
+
+    <div class="tags-head">标签</div>
+    <div id="tags" class="tags"></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <input id="note-title" class="title-input" type="text" placeholder="未选择笔记" disabled/>
+      <div class="top-right">
+        <span id="status" class="status">就绪</span>
+        <button id="btn-snapshots" class="btn btn-ghost">历史版本</button>
+        <button id="btn-tag" class="btn btn-ghost">加标签</button>
+        <button id="btn-map" class="btn btn-ghost">思维导图</button>
+      </div>
+    </header>
+
+    <section id="editor-wrap" class="panes">
+      <div class="pane">
+        <div class="pane-head">Markdown 源码</div>
+        <textarea id="editor" spellcheck="false" placeholder="在这里写 Markdown…"></textarea>
+      </div>
+      <div class="pane">
+        <div class="pane-head">实时预览</div>
+        <article id="preview" class="preview"></article>
+      </div>
+    </section>
+
+    <section id="map-wrap" class="map-wrap hidden">
+      <div class="pane-head">思维导图
+        <button id="btn-back" class="btn btn-ghost btn-small">返回编辑</button>
+      </div>
+      <div id="map" class="map"></div>
+    </section>
+  </main>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+<script src="/app.js"></script>
+</body>
+</html>
